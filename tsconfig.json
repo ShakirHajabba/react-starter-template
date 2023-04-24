@@ -18,9 +18,30 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "incremental": true,
+    "baseUrl": "src",
+    "paths": {
+      "@api/*": ["api/*"],
+      "@assets/*": ["assets/*"],
+      "@components/*": ["components/*"],
+      "@enums/*": ["enums/*"],
+      "@hooks/*": ["hooks/*"],
+      "@pages/*":["pages/*"],
+      "@redux/*": ["redux/*"],
+      "@slices/*": ["redux/slices/*"],
+      "@sagaActions/*": ["redux/sagas/sagaActions/*"],
+      "@styles/*": ["styles/*"],
+      "types/*": ["types/*"],
+      "utils/*": ["utils/*"],
+      "@mocks/*": ["../__mocks__/*"],
+    }
   },
   "include": [
     "src"
-  ]
+  ],
+  "exclude": ["node_modules", "build"]
 }
